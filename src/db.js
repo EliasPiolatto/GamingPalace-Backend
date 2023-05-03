@@ -3,7 +3,7 @@ const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
 //const Historiccart = require("./models/Historiccart");
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY_URL } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY_RENDER } = process.env;
 
 // const sequelize = new Sequelize(
 //   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/GamePalace`,
@@ -13,7 +13,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY_URL } = process.env;
 //   }
 // );
 const sequelize = new Sequelize(
-  DB_DEPLOY_URL || "postgres://default:Zv1ApubPamL9@ep-winter-wind-605110-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb",
+  DB_DEPLOY_RENDER || "postgres://default:Zv1ApubPamL9@ep-winter-wind-605110-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb",
   {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
