@@ -11,9 +11,9 @@ router.post("/", (req, res) => {
     items: [],
 
     back_urls: {
-      success: "https://gp-front.vercel.app/purchase-success",
-      failure: "https://gp-front.vercel.app/home",
-      pending: "https://gp-front.vercel.app/home",
+      success: "https://gaming-palace-frontend-eliaspiolatto.vercel.app/purchase-success",
+      failure: "https://gaming-palace-frontend-eliaspiolatto.vercel.app/home",
+      pending: "https://gaming-palace-frontend-eliaspiolatto.vercel.app/home",
     },
     auto_return: "approved",
     binary_mode: true, //no permite un pending, pending sería pago en efectivo, ejemplo rapipago.
