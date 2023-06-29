@@ -95,7 +95,7 @@ router.post("/", async (req, res) => {
     const postUser = await postNewUser(userObj);
     validation(req.body.email); //al final no, PUSE EL VALIDATION PRIMERO PARA QUE TIRE ERROR SI EL MAIL ESTA REGISTRADO
 
-    res.status(201).json(postUser);
+    return res.status(200).json(postUser);
   } catch (error) {
     //res.status(404).json(`Error in route post Product ${error}`);
     res.status(404).send(error.message);
